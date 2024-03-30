@@ -1,0 +1,10 @@
+<div style="margin-top: 1rem !important;" class="container">
+    <div class="row">
+        <div *ngFor="let element of imagesList" class="col-lg-4 col-md-4 col-sm-6 image-thumb">
+            <img (click)="addItem(element)" data-toggle="modal" data-target="#exampleModalCenter" src="{{element.image}}" alt="">
+        </div>
+    </div>
+      
+
+</div>
+<app-modal [modal_element]="modal_element" ></app-modal>

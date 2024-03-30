@@ -1,0 +1,35 @@
+<div class="container" style="margin-top: 1rem; margin-bottom: 3rem;">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12" style="margin-top: 1rem;">
+            <a href="https://twitter.com/meNeeleshNRane" target="_blank">
+                <button style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 1rem;" class="btn btn-primary">
+                    <i class="fa fa-twitter"></i> Twitter
+                  </button>
+            </a>
+            
+            <ngx-twitter-timeline  style="height: 10px !important;" [source]="{sourceType: 'profile', screenName: 'meNeeleshNRane'}" [options]="{height: '400'}" (onLoad)="onLoad($event)"></ngx-twitter-timeline>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12" style="margin-top: 1rem;">
+            <a href="https://www.youtube.com/@meNileshRane" target="_blank">
+                <button style="display: block; margin-left: auto; margin-right: auto; margin-bottom: 1rem; background-color: red;"  class="btn btn-primary">
+                    <i class="fa fa-youtube"></i> Youtube
+                  </button>
+            </a>
+            
+            <div class="image-thumb" style="margin-bottom: 1rem;max-width: 100%; overflow-x: auto; " *ngFor="let videoUrl of videosList">
+                <youtube-player class="d-flex"
+                [videoId]="getVideoId(videoUrl)"
+                (ready)="onPlayerReady($event)"
+                [height]="200"
+                (stateChange)="onPlayerStateChange($event)" >
+              </youtube-player>
+            
+            </div>
+            <!-- <div style="margin-top: 1rem !important;" class="container"> -->
+                    <!-- <div *ngFor="let videoUrl of videosList" class="col-lg-6 col-md-12 col-sm-12 image-thumb"> -->
+                        
+            <!-- </div> -->
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,13 @@
+
+
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    margin: 0;
+    color: white;
+}
+.blur {
+    filter: blur(3px); /* Adjust the blur amount as needed */
+    transition: filter 0.3s ease; /* Add a smooth transition effect */
+  }

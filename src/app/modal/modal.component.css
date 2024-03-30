@@ -1,0 +1,8 @@
+.fade.modal {
+    opacity: unset !important;
+    
+ }
+ .modal-open{
+    filter: blur(3px);
+ }
+ 

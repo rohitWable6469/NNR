@@ -1,0 +1,16 @@
+.youtube-player-placeholder{
+    width: 200px;
+}
+youtube-player-placeholder{
+    width: 10px;
+}
+:host {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+youtube-player {
+  display: block;
+  width: 100%;
+}

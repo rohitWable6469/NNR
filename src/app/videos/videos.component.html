@@ -1,0 +1,17 @@
+<div style="margin-top: 1rem !important;" class="container">
+    <div class="row">
+        <div *ngFor="let videoUrl of videosList" class="col-lg-6 col-md-12 col-sm-12 image-thumb">
+            <div style="max-width: 100%; overflow-x: auto;">
+                <youtube-player class="rounded-start d-flex"
+    [videoId]="getVideoId(videoUrl)"
+    [width]="640"
+    [height]="360"
+    (ready)="onPlayerReady($event)"
+    (stateChange)="onPlayerStateChange($event)">
+</youtube-player>
+            </div>
+            
+ 
+        </div>
+    </div>
+</div>
