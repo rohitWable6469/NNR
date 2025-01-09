@@ -13,84 +13,206 @@
 }
 
 .footer1 {
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    padding: .5rem 1rem;
-    margin-bottom: 0;
+  position: relative;
+  display: -ms-flexbox;
+  /* display: flex; */
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: .5rem 1rem;
+  margin-bottom: 0;
 }
-.image-container {
-    position: relative;
-    width: 100%;
-    max-width: 400px; /* Adjust width as needed */
+.footer-img {
+  opacity: 0; /* Start with the image hidden */
+  transform: translateY(30px); /* Start with the image below the normal position */
+  animation: fadeInUp 1.5s ease-out forwards; /* Apply animation */
+}
+
+/* Keyframes for the fade-in and slide-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
-  /* .image-container img {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .footer1 img {
+    height: calc(100vh - 100px); /* Adjust height dynamically if needed */
+  }
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  /* Adjust width as needed */
+}
+
+/* .image-container img {
     width: 100%;
     height: auto;
   } */
-  
-  .text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: white;
-    padding: 20px;
-  }
-  
-  .text-overlay h2 {
-    margin-bottom: 10px;
-  }
-  
-  .text-overlay p {
-    margin: 0;
-  }
-  .profile{
-    margin-bottom: 30px;
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  color: white;
+  padding: 20px;
 }
-.rm-3{
-    margin-top: 1rem !important;
+
+.text-overlay h2 {
+  margin-bottom: 10px;
 }
+
+.text-overlay p {
+  margin: 0;
+}
+
+.profile {
+  margin-bottom: 30px;
+}
+
+.rm-3 {
+  margin-top: 1rem !important;
+}
+
 /* img{
   background-size: contain;
   max-width:360px;
   height:266px; 
   object-fit: contain;
 } */
-.image-thumb{
+.image-thumb {
   overflow: hidden;
   /* position: relative; */
   margin-bottom: 30px;
 }
-a{
+
+a {
   background-color: transparent;
   text-decoration: none;
 }
+
 a:-webkit-any-link {
   color: -webkit-link;
   cursor: pointer;
   text-decoration: underline;
 }
+
 .overlay {
   display: inline-block;
   color: white;
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 10px;
   border-radius: 10%;
   position: absolute;
   bottom: 20px;
   left: 20px;
 }
+
 .fade.modal {
   opacity: unset !important;
-  
+
+}
+
+/* Add this CSS to your component's styles or global styles (styles.css) */
+.video-caption {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.caption-text {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.caption-text {
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+.image-thumb {
+  display: flex;
+  flex-direction: column;    /* Stack the image and title vertically */
+  align-items: center;       /* Center them horizontally */
+  justify-content: center;
+}
+
+.image-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 266px;              /* Set fixed height for the image container */
+  width: 100%;                /* Full width of the column */
+}
+
+.centered-image1 {
+  background-size: contain;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;       /* Make sure image scales well */
+}
+
+.video-caption {
+  text-align: center;        /* Center the title */
+  margin-top: 10px;           /* Add space between the image and the title */
+}
+
+.caption-text {
+  font-size: 14px;            /* Adjust font size of the title */
+  font-weight: bold;          /* Make the title bold */
+  color: #333;                /* Title color */
+  margin: 0;                  /* Remove extra margin */
+}
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.whatsapp-icon {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 5px; /* Space between the icon and the message */
+}
+
+.whatsapp-icon:hover {
+  background-color: #1ebc5a;
+  text-decoration: none;
+}
+
+.whatsapp-message {
+  font-size: 14px;
+  color: #333;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2px 5px;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }

@@ -4,7 +4,7 @@ import { NgxTwitterTimelineModule } from 'ngx-twitter-timeline';
 import { NgxTwitterWidgetsModule } from 'ngx-twitter-widgets';
 import { VideosComponent } from '../videos/videos.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
-
+import { Router, NavigationEnd } from '@angular/router';
 @Component({
   selector: 'app-media',
   standalone: true,
@@ -20,6 +20,16 @@ export class MediaComponent {
 
   onLoad(event: any){
     console.log(event)
+  }
+  constructor(private router: Router){}
+  ngOnInit(){
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        // Scroll to the top on NavigationEnd
+        document.body.scrollTop = 0; // For standard browsers
+        document.documentElement.scrollTop = 0; // For Firefox
+      }
+    })
   }
   videosList: string[] = [
     'https://www.youtube.com/watch?v=ulJiQvy6Li0',

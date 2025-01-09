@@ -1,15 +1,45 @@
-.image-thumb{
-    overflow: hidden;
-    /* position: relative; */
-    margin-bottom: 30px;
+.image-thumb {
+  overflow: hidden;
+  /* position: relative; */
+  margin-bottom: 30px;
 }
+
 :host {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  youtube-player {
-    display: block;
-    width: 100%;
-  }
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+youtube-player {
+  display: block;
+  width: 100%;
+}
+
+/* Add this CSS to your component's styles or global styles (styles.css) */
+.video-caption {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.caption-text {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 8px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.caption-text {
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* .caption-text:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #ff7e54;
+  transform: scale(1.05);
+} */

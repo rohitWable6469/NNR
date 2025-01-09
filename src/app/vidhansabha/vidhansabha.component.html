@@ -1,0 +1,18 @@
+<div style="margin-top: 1rem !important;" class="container">
+    <select class="form-select form-select-lg mb-3" [(ngModel)]="selectedType" aria-label=".form-select-lg example">
+        <option *ngFor="let option of videosKeys" [value]="option.key" [selected]="option.key === selectedType">
+            {{ option.acronym }}
+        </option>
+    </select>
+    <div class="row">
+        <div *ngFor="let videoDict of videosList" class="col-lg-4 col-md-6 col-sm-12 image-thumb">
+            <div style="max-width: 100%; overflow: hidden;display: flex; flex-direction: column;">
+                <img [src]="getThumbnailUrl(videoDict)" alt="Video Thumbnail" class="rounded-start d-flex"
+                    (click)="openVideoInNewTab(videoDict)" style="cursor: pointer; width: 100%; max-width: 640px;">
+                <div class="video-caption mt-2">
+                    <p class="caption-text">{{ videoDict.caption }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

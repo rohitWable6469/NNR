@@ -1,77 +1,65 @@
+<nav class="navbar navbar-expand-lg fixed-top"
+  style="background-color: #ff7e54;position: fixed; top: 0; left: 0; right: 0; z-index: 1000;">
+  <div class="container-fluid d-flex justify-content-start align-items-center">
+    <!-- Logo Image -->
+    <a class="navbar-brand logo d-flex align-items-center" [routerLink]="['/']">
+      <h6 class="adminlogo mb-0 d-flex align-items-center" style="font-size: 15px; margin-bottom: 0;">
+        <span>
+          निलेश नारायणराव राणे<br>
+          <p style="font-size: 10px; margin-bottom: 0;">आमदार, कुडाळ मालवण विधानसभा</p>
+        </span>
+      </h6>
+    </a>
 
-<nav class="navbar navbar-expand-lg " style="background-color: #ff7e54;">
-  <div class="container">
-  <a class="navbar-brand logo" [routerLink]="['/']">
-      <h6 class="adminlogo"><span>निलेश नारायणराव राणे<br>
-        <p style="font-size: 12px;">मा. खासदार रत्नागिरी सिंधुदुर्ग लोकसभा
-        </p><p>
-      </p></span></h6>
-  </a>
-  <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <!-- <span class="navbar-toggler-icon"></span> -->
-    <i class="fa fa-bars" aria-hidden="true" style="color: mintcream;"></i>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav" id="menuList">
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="['/']">मुख्य पृष्ठ</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/profile']">अधिक माहिती</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/gallery']">गॅलरी</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/videos']" >व्हिडिओ</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/news']">बातम्या</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/media']">माध्यमे</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/contactus']">संपर्क</a>
-      </li>
-    </ul>
+    <!-- Navbar Toggler (Mobile View) -->
+    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa fa-bars" aria-hidden="true" style="color: mintcream;"></i>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav" id="menuList">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/']" (click)="closeNavbar()">मुख्य पृष्ठ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/profile']" (click)="closeNavbar()">अधिक माहिती</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/gallery']" (click)="closeNavbar()">गॅलरी</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/videos']" (click)="closeNavbar()">व्हिडिओ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/news']" (click)="closeNavbar()">बातम्या</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/media']" (click)="closeNavbar()">माध्यमे</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/vidhansabha']" (click)="closeNavbar()">विधानसभा</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/social']" (click)="closeNavbar()">सामाजिक कार्य</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contactus']" (click)="closeNavbar()">संपर्क</a>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 </nav>
 
+<router-outlet></router-outlet>
 
-
-
-<router-outlet />
-
-<!-- <div class="footer1" style="width: 100%;background-color: #f44c14; height: 200px;">
-  <div style="display: flex; align-items: center; justify-content: center; width: 100%; " class="row">
-    <h6 style="display: block; margin-left: auto;
-    margin-right: auto;width: fit-content;">
-      सोशल मीडियावर संपर्क साधा
-    </h6>
-  </div>
-  <div style="display: flex; align-items: center; justify-content: center; width: 100%;margin-top: 0%;margin-bottom: 0; ">
-    <ul class="social-media" style="align:center">
-      <li><a class="facebook sm1" href="https://www.facebook.com/profile.php/?id=100057314956034&name=xhp_nt__fb__action__open_user"><i class="fa fa-facebook"></i></a></li>
-      <li><a class="twitter sm1" href="https://twitter.com/meNeeleshNRane"><i class="fa fa-twitter"></i></a></li>
-      <li><a class="instagram sm1" href="https://www.instagram.com/menileshrane?igsh=MXcxZXE3dXM1YXR0Nw=="><i class="fa fa-instagram"></i></a></li>
-      <li><a class="youtube sm1"  href="https://www.youtube.com/@meNileshRane"><i class="fa fa-youtube"></i></a></li>
-    </ul>
-  </div>
-</div> -->
 <footer class="footer1 text-center text-lg-start">
-  
-  
-  
   <!-- Grid container -->
   <div class="container p-4">
     <!--Grid row-->
-
-
-
     <div class="row">
-      <!--Grid column-->
+      <!-- Grid column for contact info -->
       <div class="col-lg-6 col-md-12 mb-6 mb-md-0">
         <ul class="contact-info">
           <li class="footer-list"><i class="fa fa-map-marker"></i>
@@ -82,14 +70,13 @@
             महाराष्ट्र-400 053<br><br>
           </li>
           <li class="footer-list"><i class="fa fa-phone"></i>&nbsp;02122-123456<br><br></li>
-          <li class="footer-list"><i class="fa fa-envelope"></i>&nbsp;wablerohit.1107&#64;gmail.com</li>
+          <li class="footer-list"><i class="fa fa-envelope"></i>&nbsp;testemail&#64;gmail.com</li>
         </ul>
       </div>
-      <!--Grid column-->
 
-      <!--Grid column-->
+      <!-- Grid column for Quick Links -->
       <div class="col-lg-6 col-md-12 mb-6 mb-md-0">
-        <h5 class="text-uppercase">Quick Links</h5>
+        <h5 class="text-uppercase" style="color: #ffffff; font-family: 'Roboto', sans-serif;">Quick Links</h5>
 
         <ul class="list-unstyled mb-0">
           <li class="nav-item active">
@@ -102,31 +89,31 @@
             <a class="nav-link" class="text-white" [routerLink]="['/gallery']">गॅलरी</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" class="text-white" [routerLink]="['/videos']" >व्हिडिओ</a>
+            <a class="nav-link" class="text-white" [routerLink]="['/videos']">व्हिडिओ</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" class="text-white" [routerLink]="['/news']">बातम्या</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" class="text-white" [routerLink]="['/media']">माध्यमे</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" class="text-white" [routerLink]="['/vidhansabha']">विधानसभा</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" class="text-white" [routerLink]="['/social']">सामाजिक कार्य</a>
           </li>
           <li>
             <a class="nav-link" class="text-white" [routerLink]="['/contactus']">संपर्क</a>
           </li>
         </ul>
       </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
-      
-      <!--Grid column-->
     </div>
-    <!--Grid row-->
   </div>
-  <!-- Grid container -->
 
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2024 Copyright:
-    <a class="text-white" href="#">wablerohit.1107&#64;gmaill.com</a>
+    <a class="text-white" href="#">monarchbytetechnologies&#64;gmaill.com</a>
   </div>
-  <!-- Copyright -->
 </footer>
-

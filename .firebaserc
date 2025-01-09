@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "meneeleshrane"
-  }
+    "default": "meneeleshrane",
+    "staging": "meneeleshrane"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }

@@ -1,12 +1,16 @@
-
-
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
+
 .navbar {
     position: relative;
     display: -ms-flexbox;
@@ -20,33 +24,38 @@
     padding: .5rem 1rem;
     margin-bottom: 0;
 }
+
 .header .navbar {
     padding: 15px 0;
     z-index: 99;
 }
 
-h6{
+h6 {
     color: mintcream;
     font-weight: 600;
     font-family: "Roboto", sans-serif;
     font-size: 22px;
 }
-p{
+
+p {
     font-size: 15px;
     margin: 0 0 1.75em;
     color: mintcream;
     line-height: 1.6;
 }
-a{
+
+a {
     font-size: 15px;
     font-family: "Roboto", sans-serif;
     color: white;
     /* padding: 35px 15px; */
 }
-#menuList{
-    margin-left: auto; 
+
+#menuList {
+    margin-left: auto;
     margin-right: 0;
 }
+
 .footer1 {
     position: relative;
     display: -ms-flexbox;
@@ -61,14 +70,17 @@ a{
     margin-bottom: 0;
     background-color: #ff7e54;
 }
-.contact-info{
+
+.contact-info {
     padding-left: 0;
     list-style: none;
     margin-bottom: 20px;
 }
-.footer-list{
+
+.footer-list {
     color: white;
 }
+
 .social-media {
     padding: 0;
     list-style: none;
@@ -78,7 +90,38 @@ a{
     margin-bottom: 0;
     justify-content: center;
 }
-.sm1{
+
+.sm1 {
     margin: 1rem;
     font-size: 2rem;
 }
+
+.logo-container {
+    display: flex;
+    /* Use flexbox to align the image and h6 horizontally */
+    align-items: center;
+    /* Vertically align the image and h6 */
+}
+
+.logo-container img {
+    max-height: 30px;
+    /* Adjust image size */
+    margin-right: 10px;
+    /* Space between the image and text */
+}
+
+.logo-container h6 {
+    margin: 0;
+    /* Remove any default margin */
+    font-size: 16px;
+    /* Adjust font size */
+}
+
+/* Adjust the size of the logo */
+.navbar-brand img {
+    width: 50px;
+    /* Adjust the size as needed */
+    height: auto;
+    margin-right: 10px;
+}
+

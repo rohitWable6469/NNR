@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
 import { CommonModule, NgForOf } from '@angular/common';
-
+import { Router, NavigationEnd } from '@angular/router';
 @Component({
   selector: 'app-news',
   standalone: true,
@@ -32,6 +32,16 @@ export class NewsComponent {
       'description': ''
     }
   ]
+  constructor(private router: Router){}
+  ngOnInit(){
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        // Scroll to the top on NavigationEnd
+        document.body.scrollTop = 0; // For standard browsers
+        document.documentElement.scrollTop = 0; // For Firefox
+      }
+    })
+  }
 
   addItem(el:any) {
     console.debug(el)
